@@ -1,13 +1,11 @@
 import React from "react";
-import useFetch from "../Hooks/useFetch.js";
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
-  const data = useFetch();
-  console.log(data);
-
   return (
     <div>
       <h1>Welcome!</h1>
+      <Link to={"/List/1"}>List of Characters</Link>
     </div>
   );
 };
