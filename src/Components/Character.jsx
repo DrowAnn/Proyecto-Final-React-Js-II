@@ -10,7 +10,7 @@ const Character = () => {
   const intId = parseInt(id);
   const urlTo = `https://rickandmortyapi.com/api/character/${id}`;
   const { results, isLoading, onFail } = useFetch(urlTo);
-  let color = "White";
+  let color = "white";
 
   if (isLoading) {
     return (
@@ -57,17 +57,31 @@ const Character = () => {
               alt={`Representation of ${results?.name}`}
               style={{ marginBottom: "5%", borderRadius: "20px" }}
             />
-            <p>Name: {results?.name}</p>
-            <p>Specie: {results?.species !== "" ? results?.species : "NaN"}</p>
-            <p>Type: {results?.type !== "" ? results?.type : "NaN"}</p>
-            <p>Gender: {results?.gender !== "" ? results?.gender : "NaN"}</p>
-            <p>
-              Origin:{" "}
-              {results?.origin.name !== "" ? results?.origin.name : "NaN"}
-            </p>
-            <p style={{ color: color, fontSize: "4vh" }}>
-              Status: {results?.status !== "" ? results?.status : "NaN"}
-            </p>
+            <div className="characterText">
+              <p>
+                <span>Name:</span> {results?.name}
+              </p>
+              <p>
+                <span>Specie:</span>{" "}
+                {results?.species !== "" ? results?.species : "NaN"}
+              </p>
+              <p>
+                <span>Type:</span>{" "}
+                {results?.type !== "" ? results?.type : "NaN"}
+              </p>
+              <p>
+                <span>Gender:</span>{" "}
+                {results?.gender !== "" ? results?.gender : "NaN"}
+              </p>
+              <p>
+                <span>Origin:</span>{" "}
+                {results?.origin.name !== "" ? results?.origin.name : "NaN"}
+              </p>
+              <p style={{ color: color, fontSize: "4vh" }}>
+                <span>Status:</span>{" "}
+                {results?.status !== "" ? results?.status : "NaN"}
+              </p>
+            </div>
             <div className="navigationCharacters">
               {intId - 1 >= 1 ? (
                 <>

@@ -12,7 +12,7 @@
 
 .characterPage {
   z-index: 1;
-  background-color: rgba(34, 42, 61, 0.863);
+  background-color: #222a3ddc;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,25 +21,40 @@
 .characterCard {
   display: flex;
   flex-direction: column;
-  background-color: rgb(88, 88, 88);
+  background-image: url(../Images/Portal.png);
+  background-color: #bfde42;
   z-index: 2;
-  width: 32vw;
+  height: 72vh;
+  width: 36vw;
   font-size: 1.5vw;
   font-weight: 800;
-  color: #42b4ca;
+  color: white;
   align-items: center;
   justify-items: center;
-  margin-top: 16vh;
-  margin-left: 16vw;
+  margin-top: 12vh;
+  margin-left: 12vw;
   padding: 2%;
-  border-radius: 40px;
-  box-shadow: 0px 0px 20px 6px #bfde42;
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px 6px #bfde42;
   text-align: center;
+}
+
+.characterCard span {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
 }
 
 .characterCard p {
   margin: 1%;
   background-color: transparent;
+  width: 100%;
+}
+
+.characterText {
+  background-color: #42b3cab9;
+  border-radius: 20vh;
+  height: 35vh;
+  width: 90%;
 }
 
 .navigationCharacters {
@@ -50,7 +65,7 @@
   align-items: center;
   justify-items: center;
   margin-top: 4%;
-  width: 100%;
+  width: 85%;
 }
 
 .navigationCharacters a {
