@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import useFetch from "../Hooks/useFetch.js";
 import { Link, useParams } from "react-router-dom";
+import "./List.css";
+import Banner from "../Images/Banner.jpg";
+import Footer from "../Images/Footer.jpg";
 
 const List = () => {
   const { page } = useParams();
@@ -35,11 +38,12 @@ const List = () => {
   }
 
   return (
-    <div>
+    <div className="listPage">
+      <img src={Banner} width={"100%"} alt="Banner Rick and Morty" />
+      <h1 className="charactersH1">Characters</h1>
       {data !== undefined ? (
         <>
-          <h1>Characters</h1>
-          <ul>
+          <ul className="listNames">
             {data.map((character) => {
               return (
                 <li key={character?.id}>
@@ -50,27 +54,30 @@ const List = () => {
               );
             })}
           </ul>
-          {intPage - 1 >= 1 ? (
-            <>
-              <Link to={`/List/${intPage - 1 > 1 ? intPage - 1 : 1}`}>
-                Previus Page
-              </Link>
-            </>
-          ) : (
-            ""
-          )}
-          <Link to={`/`}>Home</Link>
-          {intPage + 1 <= 42 ? (
-            <>
-              <Link to={`/List/${intPage + 1}`}>Next Page</Link>
-            </>
-          ) : (
-            ""
-          )}
+          <div className="navigationButtons">
+            {intPage - 1 >= 1 ? (
+              <>
+                <Link to={`/List/${intPage - 1 > 1 ? intPage - 1 : 1}`}>
+                  Previus Page
+                </Link>
+              </>
+            ) : (
+              <div></div>
+            )}
+            <Link to={`/`}>Home</Link>
+            {intPage + 1 <= 42 ? (
+              <>
+                <Link to={`/List/${intPage + 1}`}>Next Page</Link>
+              </>
+            ) : (
+              <div></div>
+            )}
+          </div>
         </>
       ) : (
         <></>
       )}
+      <img src={Footer} width={"100%"} alt="Footer Rick and Morty" />
     </div>
   );
 };

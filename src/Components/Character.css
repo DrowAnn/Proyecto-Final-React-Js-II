@@ -1,0 +1,78 @@
+* {
+  background-color: rgb(39, 39, 39);
+}
+
+.backgroundImagen {
+  height: 100vh;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.characterPage {
+  z-index: 1;
+  background-color: rgba(34, 42, 61, 0.863);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(88, 88, 88);
+  z-index: 2;
+  width: 32vw;
+  font-size: 1.5vw;
+  font-weight: 800;
+  color: #42b4ca;
+  align-items: center;
+  justify-items: center;
+  margin-top: 16vh;
+  margin-left: 16vw;
+  padding: 2%;
+  border-radius: 40px;
+  box-shadow: 0px 0px 20px 6px #bfde42;
+  text-align: center;
+}
+
+.characterCard p {
+  margin: 1%;
+  background-color: transparent;
+}
+
+.navigationCharacters {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 42% 16% 42%;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.navigationCharacters a {
+  font-style: none;
+  text-decoration: none;
+  font-size: 1.2vw;
+  text-shadow: 2px 2px 2px #bfde42, -2px -2px 2px #bfde42, -2px 2px 2px #bfde42,
+    2px -2px 2px #bfde42;
+  -webkit-text-stroke: 1.5px #003e4b;
+  color: #42b4ca;
+  padding-bottom: 3%;
+  background-color: #42b4ca;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-radius: 20px;
+  box-shadow: -2px 4px 2px 1px #bfde42;
+  border: solid 2px #bfde42;
+}
+
+.navigationCharacters a:hover {
+  background-color: #236572;
+  box-shadow: -2px 5px 10x 10px #bfde42;
+  text-shadow: 2px 2px 2px #819728, -2px -2px 2px #819728, -2px 2px 2px #819728,
+    2px -2px 2px #819728;
+}
